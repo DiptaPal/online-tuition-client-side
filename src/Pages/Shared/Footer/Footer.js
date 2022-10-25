@@ -7,7 +7,7 @@ import { FaAmazon } from "react-icons/fa";
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-white pt-4 pb-8 xl:pt-8">
+            <footer className="bg-white pt-4 pb-8 xl:pt-8 rounded-t-md">
                 <div className="sm:max-w-xl md:max-w-full lg:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
                     <ul className="text-lg font-light pb-8 flex flex-wrap justify-center">
                         <li className="w-1/2 md:w-1/3 lg:w-1/3">
@@ -99,23 +99,23 @@ const Footer = () => {
                         </li>
                     </ul>
                     <div className="pt-8 flex border-t border-navActive max-w-xs mx-auto items-center justify-between">
-                        <Link to="#">
+                        <a href="https://www.facebook.com/">
                             <BsFacebook className='text-2xl text-navActive'></BsFacebook>
-                        </Link>
-                        <Link to="#">
+                        </a>
+                        <a href="https://twitter.com/">
                             <BsTwitter className='text-2xl text-navActive'></BsTwitter>
-                        </Link>
-                        <Link to="#">
+                        </a>
+                        <a href="https://github.com/">
                             <BsGithub className='text-2xl text-navActive'></BsGithub>
-                        </Link>
-                        <Link to="#">
+                        </a>
+                        <a href="https://www.linkedin.com/">
                             <BsLinkedin className='text-2xl text-navActive'></BsLinkedin>
-                        </Link>
-                        <Link to="#">
+                        </a>
+                        <a href="https://www.amazon.com/">
                            <FaAmazon className='text-3xl text-navActive'></FaAmazon>
-                        </Link>
+                        </a>
                     </div>
-                    <div className="text-center text-black font-normal pt-10 sm:pt-12 flex items-center justify-center">
+                    <div className="text-black font-normal pt-10 sm:pt-12">
                         <p>© 2022 Online Study. All rights reserved.</p>
                     </div>
                 </div>
