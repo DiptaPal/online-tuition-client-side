@@ -26,10 +26,22 @@ const Header = () => {
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <NavLink
+                                    to="/home"
+                                    aria-label="Our product"
+                                    className={({ isActive }) =>
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                    }
+                                >
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
                                     to="/courses"
                                     aria-label="Our product"
-                                    title="Our product"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    className={({ isActive }) =>
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                    }
                                 >
                                     Courses
                                 </NavLink>
@@ -38,8 +50,9 @@ const Header = () => {
                                 <NavLink
                                     to="/faq"
                                     aria-label="Our product"
-                                    title="Our product"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    className={({ isActive }) =>
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                    }
                                 >
                                     FAQ
                                 </NavLink>
@@ -48,8 +61,9 @@ const Header = () => {
                                 <NavLink
                                     to="/blog"
                                     aria-label="Product pricing"
-                                    title="Product pricing"
-                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                    className={({ isActive }) =>
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                    }
                                 >
                                     Blog
                                 </NavLink>
@@ -69,9 +83,11 @@ const Header = () => {
                         <li>
                             <NavLink
                                 to="/login"
-                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide bg-navActive text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+
+                                className={({ isActive }) =>
+                                    isActive ? "inline-flex items-center justify-center h-8 px-6 font-medium tracking-wide bg-white text-navActive transition duration-200 rounded-xl shadow-md hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none" : "inline-flex items-center justify-center h-8 px-6 font-medium tracking-wide bg-navActive text-white transition duration-200 rounded-xl shadow-md hover:bg-white hover:text-navActive focus:shadow-outline focus:outline-none"
+                                }
                                 aria-label="Sign up"
-                                title="Sign up"
                             >
                                 Login
                             </NavLink>
@@ -140,7 +156,9 @@ const Header = () => {
                                                     to="/courses"
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className={({ isActive }) =>
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                    }
                                                 >
                                                     Courses
                                                 </NavLink>
@@ -150,7 +168,9 @@ const Header = () => {
                                                     to="/faq"
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
-                                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className={({ isActive }) =>
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                    }
                                                 >
                                                     FAQ
                                                 </NavLink>
@@ -160,7 +180,9 @@ const Header = () => {
                                                     to="/blog"
                                                     aria-label="About us"
                                                     title="About us"
-                                                    className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className={({ isActive }) =>
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                    }
                                                 >
                                                     Blog
                                                 </NavLink>
