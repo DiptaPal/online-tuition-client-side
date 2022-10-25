@@ -4,7 +4,7 @@ import { BsFillPeopleFill, BsPencilSquare } from "react-icons/bs";
 const Stats = () => {
     return (
         <div>
-            <section className="py-6 my-6">
+            <section className="py-6 my-20">
                 <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
                     <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-white shadow-md focus:shadow-outline">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-navActive">
@@ -29,7 +29,7 @@ const Stats = () => {
                             <BsPencilSquare className='text-white text-4xl'></BsPencilSquare>
                         </div>
                         <div className="flex flex-col justify-center align-middle text-navActive">
-                            <p className="text-3xl font-semibold leading-none">172%</p>
+                            <p className="text-3xl font-semibold leading-none">1662</p>
                             <p className="capitalize text-black">Courses</p>
                         </div>
                     </div>

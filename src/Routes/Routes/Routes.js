@@ -12,7 +12,10 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: async() =>{
+                   return fetch('https://b610-lerning-platform-server-side-dipta-pal.vercel.app/courses')
+                }
             },
             {
                 path: '/home',
