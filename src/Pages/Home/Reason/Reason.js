@@ -5,7 +5,7 @@ const Reason = () => {
         <div className='grid grid-cols-12 gap-6 bg-white py-8 rounded-md items-center'>
             <div className='col-span-12 lg:col-span-5 flex flex-col justify-center'>
                 <div className=''>
-                    <h2 className='text-4xl font-semibold'>What Make Us Different</h2>
+                    <h2 className='text-4xl font-bold'>What Make Us Different</h2>
                     <p className='text-2xl p-4'>
                         See what make us different from any other online learning platform. We are giving the best to our students
                     </p>

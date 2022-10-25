@@ -9,7 +9,7 @@ const Header = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => false);
 
     return (
-        <div className='bg-bgColor'>
+        <div className='bg-bgColor px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8'>
             <div className="py-5">
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">

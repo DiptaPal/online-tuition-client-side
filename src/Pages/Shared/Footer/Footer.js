@@ -6,7 +6,7 @@ import { FaAmazon } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div>
+        <div className='px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8'>
             <footer className="bg-white pt-4 pb-8 xl:pt-8 rounded-t-md">
                 <div className="sm:max-w-xl md:max-w-full lg:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
                     <ul className="text-lg font-light pb-8 flex flex-wrap justify-center">
