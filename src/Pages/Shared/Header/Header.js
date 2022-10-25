@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <div className='bg-bgColor'>
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">
                         <NavLink
@@ -29,7 +29,7 @@ const Header = () => {
                                     to="/home"
                                     aria-label="Our product"
                                     className={({ isActive }) =>
-                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                     }
                                 >
                                     Home
@@ -40,7 +40,7 @@ const Header = () => {
                                     to="/courses"
                                     aria-label="Our product"
                                     className={({ isActive }) =>
-                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                     }
                                 >
                                     Courses
@@ -51,7 +51,7 @@ const Header = () => {
                                     to="/faq"
                                     aria-label="Our product"
                                     className={({ isActive }) =>
-                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                     }
                                 >
                                     FAQ
@@ -62,7 +62,7 @@ const Header = () => {
                                     to="/blog"
                                     aria-label="Product pricing"
                                     className={({ isActive }) =>
-                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                     }
                                 >
                                     Blog
@@ -100,7 +100,7 @@ const Header = () => {
                             className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
                             onClick={() => setIsMenuOpen(true)}
                         >
-                            <svg className="w-5 text-white" viewBox="0 0 24 24">
+                            <svg className="w-5 text-navActive" viewBox="0 0 24 24">
                                 <path
                                     fill="currentColor"
                                     d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -137,10 +137,10 @@ const Header = () => {
                                             <button
                                                 aria-label="Close Menu"
                                                 title="Close Menu"
-                                                className="p-2 -mt-2 -mr-2 transition bg-white  duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                                className="p-2 -mt-2 -mr-2 transition text-navActive bg-white duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
-                                                <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+                                                <svg className="w-5 text-navActive" viewBox="0 0 24 24">
                                                     <path
                                                         fill="currentColor"
                                                         d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
@@ -157,7 +157,7 @@ const Header = () => {
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className={({ isActive }) =>
-                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                                     }
                                                 >
                                                     Courses
@@ -169,7 +169,7 @@ const Header = () => {
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
                                                     className={({ isActive }) =>
-                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                                     }
                                                 >
                                                     FAQ
@@ -181,7 +181,7 @@ const Header = () => {
                                                     aria-label="About us"
                                                     title="About us"
                                                     className={({ isActive }) =>
-                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-white transition-colors duration-300" : "font-medium tracking-wide text-white hover:text-navActive transition-colors duration-300"
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300"
                                                     }
                                                 >
                                                     Blog
@@ -199,7 +199,10 @@ const Header = () => {
                                             <li>
                                                 <NavLink
                                                     to="/login"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-navActive text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                    className={({ isActive }) =>
+                                                        isActive ? "inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-white text-navActive transition duration-200 rounded-xl shadow-md hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none" : "inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-navActive text-white  transition duration-200 rounded-xl shadow-md hover:bg-white hover:text-navActive focus:shadow-outline focus:outline-none"
+                                                    }
+
                                                     aria-label="Sign up"
                                                     title="Sign up"
                                                 >

@@ -2,7 +2,7 @@ import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layouts/Main");
-const { default: Home } = require("../../Pages/Home/Home");
+const { default: Home } = require("../../Pages/Home/Main/Home");
 
 export const routes = createBrowserRouter([
     {

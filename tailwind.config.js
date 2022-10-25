@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgColor: '#453d80',
-        navColor: '#918bb3',
-        navActive: '#ff7468'
+        bgColor: '#f5f4f0',
+        navColor: '#637b64',
+        navActive: '#fd661f'
       }
     },
   },
