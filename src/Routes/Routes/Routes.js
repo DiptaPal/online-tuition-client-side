@@ -1,4 +1,5 @@
 import AllCourses from "../../Pages/AllCourses/AllCourses";
+import Checkout from "../../Pages/Checkout/Checkout";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 
@@ -36,6 +37,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/course_detail/:id',
                 element: <CourseDetails></CourseDetails>,
+                loader: async ({params}) =>{
+                    return fetch(`https://b610-lerning-platform-server-side-dipta-pal.vercel.app/courses/${params.id}`)
+                }
+            },
+            {
+                path: '/checkout/:id',
+                element: <Checkout></Checkout>,
                 loader: async ({params}) =>{
                     return fetch(`https://b610-lerning-platform-server-side-dipta-pal.vercel.app/courses/${params.id}`)
                 }
