@@ -63,17 +63,17 @@ const Login = () => {
                 <h1 className="text-4xl font-bold text-center text-navActive">Login</h1>
                 <form className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-2">
-                        <label for="username" className="block text-2xl text-gray-600">Username</label>
-                        <input type="text" name="name" id="username" placeholder="Username" className="w-full px-4 py-3 text-xl border focus:border-navActive outline-none rounded-md border-gray-300 bg-gray-50 text-gray-800" required />
+                        <label htmlFor="email" className="block text-2xl text-gray-600">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 text-xl border focus:border-navActive outline-none rounded-md border-gray-300 bg-gray-50 text-gray-800" required />
                     </div>
                     <div className="space-y-2">
-                        <label for="password" className="block text-2xl text-gray-600">Password</label>
+                        <label htmlFor="password" className="block text-2xl text-gray-600">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 border focus:border-navActive outline-none rounded-md border-gray-300 text-xl bg-gray-50 text-gray-800" required />
                         <div className="flex justify-end text-base text-black">
                             <Link to="#/">Forgot Password?</Link>
                         </div>
                     </div>
-                    <button type='submit' className="block w-full p-3 text-2xl font-semibold rounded-md text-center text-white shadow bg-navActive hover:text-navActive hover:bg-white transition-all duration-300 border-2 border-transparent hover:border-2">Sign in</button>
+                    <button type='submit' className="block w-full p-3 text-2xl font-semibold rounded-md text-center text-white shadow bg-navActive hover:text-navActive hover:bg-gray-300 transition-all duration-300 border-2 border-transparent hover:border-2">Sign in</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 bg-gray-600"></div>
@@ -95,7 +95,7 @@ const Login = () => {
                         </svg>
                     </button>
                 </div>
-                <p className="text-xl text-center sm:px-6 text-black">Don't have an account? <Link to="/register" className="underline text-navActive">Sign up</Link>
+                <p className="text-xl text-center sm:px-6 text-black">Don't have an account? <Link to="/register" className="underline text-navActive">Register</Link>
                 </p>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Checkout from "../../Pages/Checkout/Checkout";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Login from "../../Pages/Login/Login/Login";
+import Register from "../../Pages/Login/Register/Register";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layouts/Main");
@@ -36,6 +37,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             },
             {
                 path: '/courses',

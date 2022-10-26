@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsFacebook, BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FaAmazon } from "react-icons/fa";
 
 
@@ -100,19 +100,19 @@ const Footer = () => {
                     </ul>
                     <div className="pt-8 flex border-t border-navActive max-w-xs mx-auto items-center justify-between">
                         <a href="https://www.facebook.com/">
-                            <BsFacebook className='text-2xl text-navActive'></BsFacebook>
+                            <BsFacebook className='text-2xl text-blue-600'></BsFacebook>
                         </a>
                         <a href="https://twitter.com/">
-                            <BsTwitter className='text-2xl text-navActive'></BsTwitter>
+                            <BsTwitter className='text-2xl text-sky-500'></BsTwitter>
                         </a>
                         <a href="https://github.com/">
-                            <BsGithub className='text-2xl text-navActive'></BsGithub>
+                            <BsGithub className='text-2xl text-black'></BsGithub>
                         </a>
                         <a href="https://www.linkedin.com/">
-                            <BsLinkedin className='text-2xl text-navActive'></BsLinkedin>
+                            <BsLinkedin className='text-2xl text-sky-500 bg-white'></BsLinkedin>
                         </a>
-                        <a href="https://www.amazon.com/">
-                           <FaAmazon className='text-3xl text-navActive'></FaAmazon>
+                        <a href="https://www.instagram.com/">
+                           <BsInstagram className='text-2xl text-pink-600'></BsInstagram>
                         </a>
                     </div>
                     <div className="text-black font-normal pt-10 sm:pt-12">
