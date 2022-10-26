@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BiBook } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Course = ({ course }) => {
     const { rating, total_student, title, teacher, price, lessons, image_url} = course
     return (
-        <Link href="#" className="block h-[550px] sm:h-[490px] rounded-lg p-4 bg-white shadow-sm shadow-indigo-100">
+        <Link to="/courses" className="block max-h-[550px] sm:h-[490px] rounded-lg p-4 bg-white shadow-sm shadow-indigo-100">
             <img
                 alt="Home"
                 src={image_url}
