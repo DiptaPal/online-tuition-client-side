@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { BsGoogle } from "react-icons/bs";
 import { FaStar } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const Checkout = () => {
     const course = useLoaderData();
@@ -41,15 +42,19 @@ const Checkout = () => {
                             </div>
                         </div>
 
-                        <div className="p-8 bg-white rounded-md flex flex-col lg:w-full xl:w-3/5">
-                            <button className="border border-transparent hover:border-navActive transition-colors duration-500 bg-navActive hover:bg-white text-white hover:text-navActive flex flex-row justify-center items-center space-x-2 py-4 rounded w-full">
-                                <div>
-                                    <BsGoogle></BsGoogle>
-                                </div>
-                                <div>
-                                    <p className="text-base leading-4">Pay</p>
-                                </div>
-                            </button>
+                        <form className="p-8 bg-white rounded-md flex flex-col lg:w-full xl:w-3/5">
+                            <Link to="/courses">
+                                <button onClick={() => {
+                                    toast.info("Payment Successful !!!", { autoClose: 700 })
+                                }} className="border border-transparent hover:border-navActive transition-colors duration-500 bg-navActive hover:bg-white text-white hover:text-navActive flex flex-row justify-center items-center space-x-2 py-4 rounded w-full">
+                                    <div>
+                                        <BsGoogle></BsGoogle>
+                                    </div>
+                                    <div>
+                                        <p className="text-base leading-4">Pay</p>
+                                    </div>
+                                </button>
+                            </Link>
 
                             <div className="flex flex-row justify-center items-center mt-6">
                                 <hr className="border w-full" />
@@ -58,36 +63,42 @@ const Checkout = () => {
                             </div>
 
                             <div className="mt-8">
-                                <input className="border border-gray-300 p-4 rounded w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" placeholder="Email" />
+                                <input className="border border-gray-300 p-4 rounded w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" name='email' placeholder="Email" required />
                             </div>
 
                             <label className="mt-8 text-base leading-4 text-gray-800">Card details</label>
                             <div className="mt-2 flex-col">
                                 <div>
-                                    <input className="border rounded-tl rounded-tr border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" placeholder="0000 1234 6549 15151" />
+                                    <input className="border rounded-tl rounded-tr border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" name='card number' type="number" placeholder="0000 1234 6549 15151" required />
                                 </div>
                                 <div className="flex-row flex">
-                                    <input className="border rounded-bl border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" placeholder="MM/YY" />
-                                    <input className="border rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" placeholder="CVC" />
+                                    <input className="border rounded-bl border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="text" name='date' placeholder="MM/YY" />
+                                    <input className="border rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="number" name='card cvc' placeholder="CVC" required />
                                 </div>
                             </div>
 
                             <label className="mt-8 text-base leading-4 text-gray-800">Name on card</label>
                             <div className="mt-2 flex-col">
                                 <div>
-                                    <input className="border rounded border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="email" placeholder="Name on card" />
+                                    <input className="border rounded border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="text" name='name' placeholder="Name on card" required />
                                 </div>
                             </div>
 
-                            <label className="mt-8 text-base leading-4 text-gray-800">Country or region</label>
+                            <label className="mt-8 mb-3 text-base leading-4 text-gray-800">Country or region</label>
 
-                            <input className="border rounded-bl rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="text" placeholder="ZIP" />
-                            <button className="border border-transparent hover:border-navActive transition-colors duration-500 bg-navActive hover:bg-white text-white hover:text-navActive flex flex-row justify-center items-center space-x-2 py-4 rounded w-full">
-                                <div>
-                                    <p className="text-base leading-4">Pay {price}</p>
-                                </div>
-                            </button>
-                        </div>
+                            <input className="border rounded-bl rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="text" name='country' required placeholder="Country" />
+                            <input className="border rounded-bl rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600 mb-4" type="text" name='country' required placeholder="ZIP" />
+
+                            <Link to="/courses">
+                                <button type='submit' onClick={() => {
+                                    toast.success("Payment Successful !!!", { autoClose: 700 })
+                                }} className="border border-transparent hover:border-navActive transition-colors duration-500 bg-navActive hover:bg-white text-white hover:text-navActive flex flex-row justify-center items-center space-x-2 py-4 rounded w-full">
+                                    <div>
+                                        <p className="text-base leading-4">Pay {price}</p>
+                                    </div>
+                                </button>
+                            </Link>
+                        </form>
                     </div>
                 </div>
             </div>

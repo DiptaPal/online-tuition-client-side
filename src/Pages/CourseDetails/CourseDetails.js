@@ -20,72 +20,73 @@ const CourseDetails = () => {
         <div className='px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mb-28 mt-10'>
             <div className='grid grid-cols-12 gap-6'>
                 <div className='col-span-12 order-2 lg:order-1 lg:col-span-8' ref={ref}>
-                    <div className='max-w-full mx-auto flex flex-col gap-4 border p-4'>
+                    <div className='max-w-full mx-auto flex flex-col gap-4 border'>
                         <div>
                             <img src={thumbnail_url} className="rounded-md object-cover object-center w-full h-52 bg-gray-500" alt="" />
                         </div>
-                        <div>
+                        <div className='flex flex-col gap-4 p-4'>
                             <div>
-
-                                <div className='flex flex-col sm:flex-row gap-4 items-center'>
-                                    <h1 className='text-4xl text-left font-extrabold'>{title}</h1>
-                                    {/* <Pdf targetRef={ref} filename="code-example.pdf"> */}
-                                    {({ toPdf }) => <button onClick={toPdf} className="mt-2 inline-block px-6 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none"><BsFileEarmarkPdf className='sm:text-2xl'></BsFileEarmarkPdf></button>}
-                                    {/* </Pdf> */}
-                                </div>
-                            </div>
-                            <div className='flex flex-col gap-2 mt-3'>
-                                <p className='text-xl text-left'>Last Updated: {teacher.last_updated}</p>
-                                <div className='flex items-center gap-5'>
-                                    <div className='flex items-center gap-3'>
-                                        <FaStar className='text-orange-400'></FaStar>
-                                        <p className='text-base'>Rating: {rating}</p>
-                                    </div>
-                                    <div className='flex items-center gap-3'>
-                                        <TbWorld className='text-blue-700'></TbWorld>
-                                        <p className='text-base'>{language}</p>
-                                    </div>
-                                </div>
-                                <div className='flex items-center flex-wrap gap-6 font-semibold'>
-                                    <div className='flex items-center gap-3'>
-                                        <BiTime></BiTime>
-                                        <p>Duration: {durations}</p>
-                                    </div>
-                                    <div className='flex items-center gap-3'>
-                                        <BiBook></BiBook>
-                                        <p>{lessons}</p>
-                                    </div>
-                                    <div className='flex items-center gap-3'>
-                                        <FiVideo></FiVideo>
-                                        <p>{lectures}</p>
-                                    </div>
-                                </div>
                                 <div>
-                                    <p className='text-base text-left'>
-                                        Total Students: <span className='font-semibold'>{total_student}</span>
-                                    </p>
+                                    <div className='flex flex-col sm:flex-row gap-4 items-center'>
+                                        <h1 className='text-4xl text-left font-extrabold'>{title}</h1>
+                                        {/* <Pdf targetRef={ref} filename="code-example.pdf"> */}
+                                        {({ toPdf }) => <button onClick={toPdf} className="mt-2 inline-block px-6 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none"><BsFileEarmarkPdf className='sm:text-2xl'></BsFileEarmarkPdf></button>}
+                                        {/* </Pdf> */}
+                                    </div>
+                                </div>
+                                <div className='flex flex-col gap-2 mt-3'>
+                                    <p className='text-xl text-left'>Last Updated: {teacher.last_updated}</p>
+                                    <div className='flex items-center gap-5'>
+                                        <div className='flex items-center gap-3'>
+                                            <FaStar className='text-orange-400'></FaStar>
+                                            <p className='text-base'>Rating: {rating}</p>
+                                        </div>
+                                        <div className='flex items-center gap-3'>
+                                            <TbWorld className='text-blue-700'></TbWorld>
+                                            <p className='text-base'>{language}</p>
+                                        </div>
+                                    </div>
+                                    <div className='flex items-center flex-wrap gap-6 font-semibold'>
+                                        <div className='flex items-center gap-3'>
+                                            <BiTime></BiTime>
+                                            <p>Duration: {durations}</p>
+                                        </div>
+                                        <div className='flex items-center gap-3'>
+                                            <BiBook></BiBook>
+                                            <p>{lessons}</p>
+                                        </div>
+                                        <div className='flex items-center gap-3'>
+                                            <FiVideo></FiVideo>
+                                            <p>{lectures}</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className='text-base text-left'>
+                                            Total Students: <span className='font-semibold'>{total_student}</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='text-left'>
-                            <h2 className='text-3xl font-semibold underline'>Requirements:</h2>
-                            <ul>
-                                {
-                                    requirement.map(r => <li className='text-base list-disc ml-10 mt-2'>{r}</li>)
-                                }
-                            </ul>
-                        </div>
-                        <div className='text-left'>
-                            <h2 className='text-3xl font-semibold underline'>Overview:</h2>
-                            <ul>
-                                {
-                                    overview.map(o => <li className='text-base list-decimal ml-10 mt-2'>{o}</li>)
-                                }
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className='text-3xl font-semibold underline text-left'>Description</h2>
-                            <p className='text-justify'>{details}</p>
+                            <div className='text-left'>
+                                <h2 className='text-3xl font-semibold underline'>Requirements:</h2>
+                                <ul>
+                                    {
+                                        requirement.map(r => <li className='text-base list-disc ml-10 mt-2'>{r}</li>)
+                                    }
+                                </ul>
+                            </div>
+                            <div className='text-left'>
+                                <h2 className='text-3xl font-semibold underline'>Overview:</h2>
+                                <ul>
+                                    {
+                                        overview.map(o => <li className='text-base list-decimal ml-10 mt-2'>{o}</li>)
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 className='text-3xl font-semibold underline text-left'>Description</h2>
+                                <p className='text-justify'>{details}</p>
+                            </div>
                         </div>
                         <div className='mt-4'>
                             <h2 className='text-3xl font-semibold underline'>Instructor</h2>
@@ -116,9 +117,9 @@ const CourseDetails = () => {
                                 </div>
                                 <p className='text-justify'>{teacher.about}</p>
                             </div>
-
                         </div>
                     </div>
+
                 </div>
                 <div className='col-span-12 order-1 lg:order-2 lg:col-span-4 lg:px-0 w-full'>
                     <div className="rounded-md shadow-md bg-gray-50 text-gray-800">
