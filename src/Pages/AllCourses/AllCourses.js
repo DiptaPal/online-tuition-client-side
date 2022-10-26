@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import RightSide from '../Home/RightSide/RightSide';
-import LeftSide from '../LeftSide/LeftSide';
+import LeftSide from '../Home/LeftSide/LeftSide';
 
 const AllCourses = () => {
     const courses = useLoaderData();
