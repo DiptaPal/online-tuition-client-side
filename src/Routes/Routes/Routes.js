@@ -1,4 +1,5 @@
 import AllCourses from "../../Pages/AllCourses/AllCourses";
+import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
@@ -26,6 +27,10 @@ export const routes = createBrowserRouter([
                 loader: async() =>{
                    return fetch('https://b610-lerning-platform-server-side-dipta-pal.vercel.app/courses')
                 }
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>,
             },
             {
                 path: '/courses',
