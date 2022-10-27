@@ -66,7 +66,7 @@ const AuthProvider = ({ children }) => {
             }
             setLoader(false)
         })
-        return () => unsubscribe
+        return () => unsubscribe();
     },[])
 
     const authInfo = { user, loader, setLoader, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify, logIn, logOut, passwordReset }

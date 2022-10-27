@@ -105,8 +105,8 @@ const Header = () => {
                                             {
                                                 user?.photoURL ?
                                                     <Link to='/profile' data-tip={user?.displayName}>
-                                                        <img className='w-14 p-1 h-14 mx-auto bg-navActive rounded-xl text-center' src={user?.photoURL} alt="" />
                                                         <ReactTooltip place="bottom" type="error" effect="float" />
+                                                        <img className='w-14 p-1 h-14 mx-auto bg-navActive rounded-xl text-center' src={user?.photoURL} alt="" />
                                                     </Link>
                                                     :
                                                     <Link to='/profile' className='text-navActive' data-tip={user?.displayName}>

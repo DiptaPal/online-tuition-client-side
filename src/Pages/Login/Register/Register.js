@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Register = () => {
-    const { singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify } = useContext(AuthContext);
+    const {setLoader, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const [accept, setAccept] = useState(false);
@@ -42,7 +42,7 @@ const Register = () => {
     const handleUpdateUser = (name, photo_url) => {
         updateUserProfile({ displayName: name, photoURL: photo_url })
             .then(() => {
-
+                setLoader(false)
             })
             .catch(error => {
                 console.log(error.message);
