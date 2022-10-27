@@ -121,9 +121,9 @@ const Register = () => {
                         <p className='text-red-600 font-medium text-base'>{error}</p>
                     </div>
                     <div className='space-y-2'>
-                        <div className='flex items-center items-start mb-4'>
-                            <input id="checkbox" onClick={handleAccepted} type="checkbox"/>
-                                <label htmlFor="checkbox" class="text-sm ml-3 font-medium text-gray-900">I agree to the <Link to="/terms&conditions" className="text-blue-600 hover:underline">terms and conditions</Link></label>
+                        <div className='flex items-start mb-4'>
+                            <input id="checkbox" onClick={handleAccepted} className="cursor-pointer h-5 w-5" type="checkbox"/>
+                                <label htmlFor="checkbox" className="cursor-pointer text-sm ml-3 font-medium text-gray-900">I agree to the <Link to="/terms&conditions" className="text-blue-600 hover:underline">terms and conditions</Link></label>
                         </div>
                     </div>
                     <div>

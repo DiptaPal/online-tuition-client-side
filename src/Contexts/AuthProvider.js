@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
         return sendEmailVerification(auth.currentUser)
     }
 
-    const updateUserProfile = (profile, photo) => {
+    const updateUserProfile = (profile) => {
         setLoader(true)
         return updateProfile(auth.currentUser, profile)
     }
@@ -67,7 +67,7 @@ const AuthProvider = ({ children }) => {
             setLoader(false)
         })
         return () => unsubscribe
-    }, [])
+    },[])
 
     const authInfo = { user, loader, setLoader, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify, logIn, logOut, passwordReset }
 

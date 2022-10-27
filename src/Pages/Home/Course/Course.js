@@ -53,7 +53,6 @@ const Course = ({ course }) => {
                 </div>
             </div>
         </Link>
-
     );
 };
 
