@@ -2,7 +2,6 @@ import React from 'react';
 import { AiOutlineEye, AiOutlinePlaySquare } from 'react-icons/ai';
 import { BiBook, BiTime, BiTrophy } from 'react-icons/bi';
 import { BsCodeSlash, BsFileEarmarkPdf, BsFolderSymlink, BsPeopleFill, BsPhone } from 'react-icons/bs';
-
 import { RiBook2Fill, RiFilePaper2Line } from 'react-icons/ri';
 import { TbWorld } from 'react-icons/tb';
 import { MdLoop } from 'react-icons/md';
@@ -10,7 +9,15 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import { FiVideo } from 'react-icons/fi';
 
+import ReactDOM from "react-dom";
+import Pdf from "react-to-pdf";
 const ref = React.createRef();
+const options = {
+    orientation: 'landscape',
+    unit: 'in',
+    format: [10, 10]
+};
+
 const CourseDetails = () => {
     const course = useLoaderData();
 
@@ -19,19 +26,19 @@ const CourseDetails = () => {
     return (
         <div className='px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mb-28 mt-10'>
             <div className='grid grid-cols-12 gap-6'>
-                <div className='col-span-12 order-2 lg:order-1 lg:col-span-8' ref={ref}>
+                <div className='col-span-12 order-2 lg:order-1 lg:col-span-8'>
                     <div className='max-w-full mx-auto flex flex-col gap-4 border'>
                         <div>
                             <img src={thumbnail_url} className="rounded-md object-cover object-center w-full h-52 bg-gray-500" alt="" />
                         </div>
-                        <div className='flex flex-col gap-4 p-4'>
+                        <div className='flex flex-col gap-4 p-4' ref={ref}>
                             <div>
                                 <div>
                                     <div className='flex flex-col sm:flex-row gap-4 items-center'>
                                         <h1 className='text-4xl text-left font-extrabold'>{title}</h1>
-                                        {/* <Pdf targetRef={ref} filename="code-example.pdf"> */}
-                                        {({ toPdf }) => <button onClick={toPdf} className="mt-2 inline-block px-6 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none"><BsFileEarmarkPdf className='sm:text-2xl'></BsFileEarmarkPdf></button>}
-                                        {/* </Pdf> */}
+                                        <Pdf targetRef={ref} filename={`${title}.pdf`} options={options} x={.5} y={.4} scale={0.9}>
+                                            {({ toPdf }) => <button onClick={toPdf} className="mt-2 inline-block px-6 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-gray-300 hover:text-navActive focus:shadow-outline focus:outline-none"><BsFileEarmarkPdf className='sm:text-2xl'></BsFileEarmarkPdf></button>}
+                                        </Pdf>
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-2 mt-3'>
@@ -85,7 +92,7 @@ const CourseDetails = () => {
                             </div>
                             <div>
                                 <h2 className='text-3xl font-semibold underline text-left'>Description</h2>
-                                <p className='text-justify'>{details}</p>
+                                <p className='text-justify mt-2'>{details}</p>
                             </div>
                         </div>
                         <div className='mt-4'>
@@ -119,7 +126,6 @@ const CourseDetails = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className='col-span-12 order-1 lg:order-2 lg:col-span-4 lg:px-0 w-full'>
                     <div className="rounded-md shadow-md bg-gray-50 text-gray-800">
@@ -128,7 +134,9 @@ const CourseDetails = () => {
                             <p className='text-3xl my-3 text-left font-extrabold'>{price}</p>
                             <div className='flex flex-col gap-3 mb-1'>
                                 <Link to={`/checkout/${_id}`} className="w-full px-8 py-3 text-lg font-semibold bg-navActive text-white shadow-md border border-navActive rounded-md transition duration-200 hover:bg-orange-700 hover:border-navActive hover:text-white focus:shadow-outline focus:outline-none">Get Premium Access</Link>
-                                <Link to="/" className="w-full px-8 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-gray-300 hover:text-navActive focus:shadow-outline focus:outline-none">PDF Download</Link>
+                                <Pdf targetRef={ref} filename={`${title}.pdf`} options={options} x={.5} y={.4} scale={0.9}>
+                                    {({ toPdf }) => <button onClick={toPdf} className="w-full px-8 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-gray-300 hover:text-navActive focus:shadow-outline focus:outline-none">PDF Download</button>}
+                                </Pdf>
                             </div>
                             <div className='my-3 flex flex-col flex-wrap'>
                                 <p className='font-bold text-left'>This course includes:</p>

@@ -5,6 +5,7 @@ import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layouts/Main");
@@ -58,7 +59,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <Checkout></Checkout>,
+                element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
                 loader: async ({params}) =>{
                     return fetch(`https://b610-lerning-platform-server-side-dipta-pal.vercel.app/courses/${params.id}`)
                 }
