@@ -27,9 +27,9 @@ const Login = () => {
                     toast.success("Log in success!", { autoClose: 1000 })
                 }
                 else {
-                    navigate('/login')
+                    navigate(from, { replace: true });
                     setError(error.message)
-                    toast.error("Please verify your email!", { autoClose: 1000 })
+                    toast.error("Please verify your email !", { autoClose: 2000 })
                 }
             })
             .catch(error => {
