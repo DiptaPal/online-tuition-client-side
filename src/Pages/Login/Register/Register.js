@@ -5,9 +5,12 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Register = () => {
-    const { user, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile , sendVerify} = useContext(AuthContext);
+    const { user, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const [accept, setAccept] = useState(false);
+
+
     let from = location.state?.from?.pathname || "/";
     const [error, setError] = useState();
 
@@ -21,43 +24,43 @@ const Register = () => {
         // console.log(name,photo_url,email, password);
         setError(" ");
         createUser(email, password)
-        .then(result => {
-            handleUpdateUser(name, photo_url);
-            handleEmailVerification();
-            toast.success('Registration Successful!', {autoClose: 1000})
-            console.log(result.user);
-            form.reset();
-            navigate('/login');
-        })
-        .catch(error => {
-            setError(error.message)
-            toast.error(error.message, {autoClose: 1000})
-        })
+            .then(result => {
+                handleUpdateUser(name, photo_url);
+                handleEmailVerification();
+                toast.success('Registration Successful!', { autoClose: 1000 })
+                console.log(result.user);
+                form.reset();
+                navigate('/login');
+            })
+            .catch(error => {
+                setError(error.message)
+                toast.error(error.message, { autoClose: 1000 })
+            })
 
     }
 
     const handleUpdateUser = (name, photo_url) => {
-        updateUserProfile({displayName: name, photoURL: photo_url})
-        .then(() => {
+        updateUserProfile({ displayName: name, photoURL: photo_url })
+            .then(() => {
 
-        })
-        .catch(error => {
-            console.log(error.message);
-        })
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
     }
 
-    const handleEmailVerification = () =>{
+    const handleEmailVerification = () => {
         sendVerify()
-        .then(() => {
-            toast.info("Email verification sent!", {autoClose: 1000})
-        })
-        .catch(error => {
-            setError(error.message)
-            toast.error(error.message, {autoClose: 1000})
-        })
+            .then(() => {
+                toast.info("Email verification sent!", { autoClose: 1000 })
+            })
+            .catch(error => {
+                setError(error.message)
+                toast.error(error.message, { autoClose: 1000 })
+            })
     }
 
-    
+
     const handleGoogleSingIn = () => {
         singInWithGoogle()
             .then(result => {
@@ -68,6 +71,7 @@ const Register = () => {
                 toast.success(error.massage, { autoClose: 1000 })
             })
     }
+
     const handleTwitterSingIn = () => {
         signInWithTwitter()
             .then(result => {
@@ -89,6 +93,11 @@ const Register = () => {
                 toast.success(error.massage, { autoClose: 1000 })
             })
     }
+
+    const handleAccepted = event => {
+        setAccept(event.target.checked)
+    }
+
     return (
         <div className='w-screen flex justify-center items-center my-28'>
             <div className="w-full max-w-lg p-8 space-y-3 rounded-xl bg-white text-black">
@@ -109,10 +118,16 @@ const Register = () => {
                     <div className="space-y-2">
                         <label htmlFor="password" className="block text-2xl text-gray-600">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 border focus:border-navActive outline-none rounded-md border-gray-300 text-xl bg-gray-50 text-gray-800" required />
-                        <p className='text-red-500 font-medium text-base'>{error}</p>
+                        <p className='text-red-600 font-medium text-base'>{error}</p>
+                    </div>
+                    <div className='space-y-2'>
+                        <div className='flex items-center items-start mb-4'>
+                            <input id="checkbox" onClick={handleAccepted} type="checkbox"/>
+                                <label htmlFor="checkbox" class="text-sm ml-3 font-medium text-gray-900">I agree to the <Link to="/terms&conditions" className="text-blue-600 hover:underline">terms and conditions</Link></label>
+                        </div>
                     </div>
                     <div>
-                        <button type='submit' className="block w-full p-3 text-2xl font-semibold rounded-md text-center text-white shadow bg-navActive hover:text-navActive hover:bg-gray-300 transition-all duration-300 border-2 border-transparent hover:border-2">Register</button>
+                        <button type='submit' disabled={!accept} className="block disabled:bg-black disabled:text-white w-full p-3 text-2xl font-semibold rounded-md text-center text-white shadow bg-navActive hover:text-navActive hover:bg-gray-300 transition-all duration-300 border-2 border-transparent hover:border-2">Register</button>
                     </div>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">

@@ -34,8 +34,7 @@ const Header = () => {
                                     aria-label="Our product"
                                     className={({ isActive }) =>
                                         isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300 text-xl" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300 text-xl"
-                                    }
-                                >
+                                    }>
                                     Home
                                 </NavLink>
                             </li>
@@ -87,17 +86,20 @@ const Header = () => {
                         </li>
                         <li>               
                         {
-                            user && user.uid ?
+                            user && user?.uid ?
                                 <NavLink>
                                     {
                                         user?.photoURL ? 
+                                        <div data-tip={user?.displayName}>
+                                            <img className='w-12 p-1 h-12 mx-auto bg-white rounded-xl text-center' src={user?.photoURL} alt="" />
+                                            <ReactTooltip place="bottom" type="error" effect="float"/>
+                                        </div>
+                                        :
                                         <div className='text-navActive' data-tip={user?.displayName}>
                                             <FiUserCheck className='w-12 p-1 h-12 mx-auto bg-white rounded-xl text-center'>
                                             </FiUserCheck>
                                             <ReactTooltip place="bottom" type="error" effect="float"/>
                                         </div>
-                                        :
-                                        <img src={user?.photoURL} alt="" />
                                     }
                                 </NavLink> 
                                 :

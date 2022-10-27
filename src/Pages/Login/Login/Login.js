@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const { setLoader, singInWithGoogle, signInWithGithub, signInWithTwitter, logIn, passwordReset } = useContext(AuthContext);
-
     const navigate = useNavigate();
     const location = useLocation();
     const [email, setEmail] = useState();
