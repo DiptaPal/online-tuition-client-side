@@ -4,7 +4,7 @@ const Other = () => {
     return (
         <div>
             <div className='flex flex-col lg:flex-row justify-between gap-4 items-center my-10'>
-                <div data-aos="fade-left" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[530px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
+                <div data-aos="fade-up" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[530px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
                     <div className='w-full mx-auto h-full flex justify-center items-center'>
                         <img className='bg-cover' src="https://i.ibb.co/ys4vMjw/RST32.png" alt="" />
                     </div>
@@ -23,7 +23,7 @@ const Other = () => {
                     </div>
                 </div>
 
-                <div data-aos="fade-right" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[580px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
+                <div data-aos="fade-up" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[580px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
                     <div className='w-full mx-auto h-full flex justify-center items-center'>
                         <img className='bg-cover' src="https://i.ibb.co/VjQRYDb/SOMV747.png" alt="" />
                     </div>
