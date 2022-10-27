@@ -9,7 +9,7 @@ const Hero = () => {
         <div>
             <section className="text-gray-800">
                 <div className=" flex flex-col justify-center py-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-                    <div data-aos="fade-right" className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-2xl lg:text-left">
+                    <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-2xl lg:text-left">
                         <h1 className="text-4xl font-bold leading-none sm:text-6xl">
                             <span>Find Your Course</span><br />
                             <span className="text-navActive block lg:inline"> & </span>
@@ -22,7 +22,7 @@ const Hero = () => {
                             <Link to="/" className="px-8 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none">Learn More</Link>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="flex items-center justify-center mt-8 lg:mt-0">
+                    <div className="flex items-center justify-center mt-8 lg:mt-0">
                         <div>
                             <Lottie className='h-[340px] sm:h-[500px] flex items-center xl:mr-28' animationData={heroLogo} loop={true} />
                         </div>

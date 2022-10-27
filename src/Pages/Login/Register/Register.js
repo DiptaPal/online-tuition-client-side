@@ -111,7 +111,7 @@ const Register = () => {
     }
 
     return (
-        <div data-aos="fade-down" className='w-screen flex justify-center items-center my-28'>
+        <div  className='w-screen flex justify-center items-center my-28'>
             <div className="w-full max-w-lg p-8 space-y-3 rounded-xl bg-white text-black">
                 <h1 className="text-4xl font-bold text-center text-navActive">Registration</h1>
                 <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">

@@ -98,19 +98,19 @@ const Footer = () => {
                         </li>
                     </ul>
                     <div className="pt-8 flex border-t border-navActive max-w-xs mx-auto items-center justify-between">
-                        <a data-aos="fade-down" href="https://www.facebook.com/">
+                        <a  href="https://www.facebook.com/">
                             <BsFacebook className='text-2xl text-blue-600'></BsFacebook>
                         </a>
-                        <a data-aos="fade-up" href="https://twitter.com/">
+                        <a  href="https://twitter.com/">
                             <BsTwitter className='text-2xl text-sky-500'></BsTwitter>
                         </a>
-                        <a data-aos="fade-down" href="https://github.com/">
+                        <a  href="https://github.com/">
                             <BsGithub className='text-2xl text-black'></BsGithub>
                         </a>
-                        <a data-aos="fade-up" href="https://www.linkedin.com/">
+                        <a  href="https://www.linkedin.com/">
                             <BsLinkedin className='text-2xl text-sky-500 bg-white'></BsLinkedin>
                         </a>
-                        <a data-aos="fade-down" href="https://www.instagram.com/">
+                        <a  href="https://www.instagram.com/">
                            <BsInstagram className='text-2xl text-pink-600'></BsInstagram>
                         </a>
                     </div>

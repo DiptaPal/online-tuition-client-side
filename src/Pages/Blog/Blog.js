@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <div className="space-y-4 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 my-28 text-left text-2xl">
             <h1 className='text-3xl font-bold text-center border-b-4 border-navActive pb-2 text-black mb-10 max-w-[400px] mx-auto'>All Blog is here</h1>
-            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white shadow p-6" open>
+            <details  className="group border-l-4 border-navActive bg-white shadow p-6" open>
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         What is cors?
@@ -41,7 +41,7 @@ const Blog = () => {
                 </p>
             </details>
 
-            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white shadow p-6">
+            <details  className="group border-l-4 border-navActive bg-white shadow p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg text-left md:text-2xl font-medium text-gray-900">
                         Why are you using firebase? What other options do you have to implement authentication?
@@ -81,7 +81,7 @@ const Blog = () => {
                 </div>
             </details>
 
-            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white p-6">
+            <details  className="group border-l-4 border-navActive bg-white p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         How does the private route work?
@@ -111,7 +111,7 @@ const Blog = () => {
                     <img className='mt-2' src="https://i.ibb.co/xJQwQ0z/code.png" alt="" />
                 </p>
             </details>
-            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white p-6">
+            <details  className="group border-l-4 border-navActive bg-white p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         What is Node? How does Node work?

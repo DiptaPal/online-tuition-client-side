@@ -8,7 +8,7 @@ const AllCourses = () => {
     return (
         <div className='px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mb-28'>
             <div className='grid grid-cols-12 gap-6'>
-                <div className='col-span-12 lg:col-span-3 sticky top-0'>
+                <div className='col-span-12 lg:col-span-3'>
                     {
                         courses.map(course => <LeftSide
                             key={course._id}

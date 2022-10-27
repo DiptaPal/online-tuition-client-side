@@ -156,7 +156,7 @@ const Header = () => {
                         </button>
                         {isMenuOpen && (
                             <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-bgColor border rounded shadow-sm">
+                                <div className="p-5 bg-white border rounded shadow-sm">
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <NavLink
@@ -188,6 +188,16 @@ const Header = () => {
                                     </div>
                                     <nav>
                                         <ul className="space-y-4">
+                                            <li>
+                                                <NavLink
+                                                    to="/home"
+                                                    aria-label="Our product"
+                                                    className={({ isActive }) =>
+                                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300 text-xl" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300 text-xl"
+                                                    }>
+                                                    Home
+                                                </NavLink>
+                                            </li>
                                             <li>
                                                 <NavLink
                                                     to="/courses"

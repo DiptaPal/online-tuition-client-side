@@ -4,7 +4,7 @@ const Other = () => {
     return (
         <div>
             <div className='flex flex-col lg:flex-row justify-between gap-4 items-center my-10'>
-                <div data-aos="fade-up" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[530px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
+                <div  className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[530px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
                     <div className='w-full mx-auto h-full flex justify-center items-center'>
                         <img className='bg-cover' src="https://i.ibb.co/ys4vMjw/RST32.png" alt="" />
                     </div>
@@ -23,7 +23,7 @@ const Other = () => {
                     </div>
                 </div>
 
-                <div data-aos="fade-up" className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[580px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
+                <div  className='flex flex-col md:flex-row justify-between items-center gap-2 py-4 md:py-0 my-10 h-[580px] md:h-96 px-8 rounded-md shadow shadow-navActive'>
                     <div className='w-full mx-auto h-full flex justify-center items-center'>
                         <img className='bg-cover' src="https://i.ibb.co/VjQRYDb/SOMV747.png" alt="" />
                     </div>
@@ -42,7 +42,7 @@ const Other = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-in" className='my-10 bg-navActive py-10 rounded-md flex flex-col justify-between gap-4'>
+            <div  className='my-10 bg-navActive py-10 rounded-md flex flex-col justify-between gap-4'>
                 <h2 className='text-white text text-2xl sm:text-4xl font-semibold'>Subscribe To Our Newsletter</h2>
                 <div>
                     <input className='shadow-md py-2 w-28 sm:w-64 text-sm sm:text-lg outline-none pl-2 rounded-l-lg text-navActive' type="email" placeholder='Enter Your Email Address' />
