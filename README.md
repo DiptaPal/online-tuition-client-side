@@ -2,9 +2,9 @@
 
 ## Live Link: https://online-study-f1d0e.web.app/
 
-## Repository Link: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-DiptaPal
+## Client Side Repository Link: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-DiptaPal
 
-## Repository Link: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-DiptaPal
+## Server Side Repository Link: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-DiptaPal
 
 ## <u>Features:</u>
 * User Authentication
