@@ -2,9 +2,9 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className="space-y-4 px-10 md:px-0 max-w-screen-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto mt-16 mb-20">
+        <div className="space-y-4 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 my-28 text-left text-2xl">
             <h1 className='text-3xl font-bold text-center border-b-4 border-navActive pb-2 text-black mb-10 max-w-[400px] mx-auto'>All Blog is here</h1>
-            <details className="group border-l-4 border-navActive bg-white shadow p-6" open>
+            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white shadow p-6" open>
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         What is cors?
@@ -35,13 +35,13 @@ const Blog = () => {
 
                     For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers. <br />
                     <br />
-                    <img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png" alt="" />
+                    <div className='flex justify-center items-center'><img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png" alt="" /></div>
                     <br /><br />
                     The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests.
                 </p>
             </details>
 
-            <details className="group border-l-4 border-navActive bg-white shadow p-6">
+            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white shadow p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg text-left md:text-2xl font-medium text-gray-900">
                         Why are you using firebase? What other options do you have to implement authentication?
@@ -81,7 +81,7 @@ const Blog = () => {
                 </div>
             </details>
 
-            <details className="group border-l-4 border-navActive bg-white p-6">
+            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         How does the private route work?
@@ -111,7 +111,7 @@ const Blog = () => {
                     <img className='mt-2' src="https://i.ibb.co/xJQwQ0z/code.png" alt="" />
                 </p>
             </details>
-            <details className="group border-l-4 border-navActive bg-white p-6">
+            <details data-aos="zoom-out" className="group border-l-4 border-navActive bg-white p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                         What is Node? How does Node work?

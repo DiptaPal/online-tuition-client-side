@@ -35,6 +35,9 @@
 * Swiper JS 
 * Firebase
 * React-to-Pdf
+* react-loader-spinner
+* react Aos
+
 
 
 ## Getting Started with Create React App

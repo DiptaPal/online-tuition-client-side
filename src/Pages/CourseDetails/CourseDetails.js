@@ -28,7 +28,7 @@ const CourseDetails = () => {
                 <div className='col-span-12 order-2 lg:order-1 lg:col-span-8'>
                     <div className='max-w-full mx-auto flex flex-col gap-4 border'>
                         <div>
-                            <img src={thumbnail_url} className="rounded-md object-cover object-center w-full h-52 bg-gray-500" alt="" />
+                            <img data-aos="zoom-in" src={thumbnail_url} className="rounded-md object-cover object-center w-full h-52 bg-gray-500" alt="" />
                         </div>
                         <div className='flex flex-col gap-4 p-4' ref={ref}>
                             <div>
@@ -98,7 +98,7 @@ const CourseDetails = () => {
                             <h2 className='text-3xl font-semibold underline'>Instructor</h2>
                             <div className='flex shadow shadow-navActive flex-col gap-2 mt-4 bg-white rounded-md p-4'>
                                 <div>
-                                    <img src={teacher.author_img} className="w-24 h-24 mx-auto rounded-full shadow shadow-navActive" alt="" />
+                                    <img data-aos="zoom-in" src={teacher.author_img} className="w-24 h-24 mx-auto rounded-full shadow shadow-navActive" alt="" />
                                     <p className='text-base font-bold'>{teacher.name}</p>
                                 </div>
                                 <div className='flex flex-wrap gap-6 justify-center'>
@@ -128,7 +128,7 @@ const CourseDetails = () => {
                 </div>
                 <div className='col-span-12 order-1 lg:order-2 lg:col-span-4 lg:px-0 w-full'>
                     <div className="rounded-md shadow-md bg-gray-50 text-gray-800">
-                        <img src={image_url} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
+                        <img data-aos="zoom-in" src={image_url} alt="" className="object-cover object-center w-full h-72 bg-gray-500" />
                         <div className="p-3">
                             <p className='text-3xl my-3 text-left font-extrabold'>{price}</p>
                             <div className='flex flex-col gap-3 mb-1'>
