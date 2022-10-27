@@ -5,7 +5,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const RightSide = ({ course }) => {
-    const { _id, price, like, rating, lessons, title, total_student, teacher, image_url, short_details } = course
+    const { _id, like, rating, lessons, title, total_student, teacher, image_url, short_details } = course
     return (
         <Link to={`/course_detail/${_id}`}>
             <div className="rounded-md shadow-md w-auto max-h-[600px] sm:max-h-[500px] md:max-h-[580px] bg-gray-50 text-gray-800">

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Register = () => {
-    const { user, singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify } = useContext(AuthContext);
+    const { singInWithGoogle, signInWithGithub, signInWithTwitter, createUser, updateUserProfile, sendVerify } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const [accept, setAccept] = useState(false);

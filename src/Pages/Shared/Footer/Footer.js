@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsFacebook, BsTwitter, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
-import { FaAmazon } from "react-icons/fa";
 
 
 const Footer = () => {
