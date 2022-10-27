@@ -8,7 +8,7 @@ const Checkout = () => {
     const course = useLoaderData();
     const { _id, price, title, image_url, rating } = course
     return (
-        <div className="flex justify-center items-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mb-28 mt-10">
+        <div className="flex justify-center items-center px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mb-28 mt-2">
             <div className="py-16 px-4 md:px-6 2xl:px-0 flex justify-center items-center 2xl:mx-auto 2xl:container">
                 <div className="flex flex-col justify-start items-start w-full space-y-9">
                     <div className="flex justify-start flex-col items-start space-y-2">

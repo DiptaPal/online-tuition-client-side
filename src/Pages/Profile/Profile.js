@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Profile = () => {
-    const { user,loader, setLoader, updateUserProfile } = useContext(AuthContext)
+    const { user, updateUserProfile } = useContext(AuthContext)
 
     const [userEmail, setUserEmail] = useState(user?.email)
     const [userName, setUserName] = useState(user?.displayName);
