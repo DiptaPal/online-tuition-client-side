@@ -6,6 +6,7 @@ import { AuthContext } from '../../../Contexts/AuthProvider';
 import { FiUserCheck } from 'react-icons/fi';
 import ReactTooltip from 'react-tooltip';
 import { toast } from 'react-toastify';
+import { IoMdExit } from 'react-icons/io';
 
 
 const Header = () => {
@@ -88,7 +89,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
-                        <li>
+                        {/* <li>
                             <div className="flex items-end">
                                 <DarkModeToggle
                                     onChange={setIsDarkMode}
@@ -96,11 +97,11 @@ const Header = () => {
                                     size={70}
                                 />
                             </div>
-                        </li>
+                        </li> */}
                         <li>
                             {
                                 user && user?.uid ?
-                                    <div className='flex items-center gap-1'>
+                                    <div className='flex items-center gap-2'>
                                         <NavLink>
                                             {
                                                 user?.photoURL ?
@@ -116,13 +117,16 @@ const Header = () => {
                                                     </Link>
                                             }
                                         </NavLink>
-                                        <button onClick={handleLogout} className="px-4 py-1 text-lg text-navActive bg-white font-semibold shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none">Logout</button>
+                                        <button onClick={handleLogout} className="px-4 py-2 text-lg text-navActive bg-white font-semibold shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none flex items-center gap-2">
+                                            <span>Logout</span>
+                                            <IoMdExit></IoMdExit>
+                                        </button>
                                     </div>
                                     :
                                     <NavLink
                                         to="/login"
                                         className={({ isActive }) =>
-                                            isActive ? "inline-flex items-center justify-center px-4 py-1 font-medium tracking-wide bg-white text-navActive transition duration-200 rounded-xl shadow-md hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none text-xl" : "inline-flex items-center justify-center px-4 py-1 font-medium tracking-wide bg-navActive text-white transition duration-200 rounded-xl shadow-md hover:bg-white hover:text-navActive focus:shadow-outline focus:outline-none text-xl"
+                                            isActive ? "inline-flex items-center justify-center px-4 py-2 font-medium tracking-wide bg-white text-navActive transition duration-200 rounded-md shadow-md hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none text-xl" : "inline-flex items-center justify-center px-4 py-2 font-medium tracking-wide bg-navActive text-white transition duration-200 rounded-md shadow-md hover:bg-white hover:text-navActive focus:shadow-outline focus:outline-none text-xl"
                                         }
                                         aria-label="Sign up"
                                     >

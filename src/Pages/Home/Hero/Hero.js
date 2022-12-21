@@ -18,7 +18,7 @@ const Hero = () => {
                         <p className="mt-6 mb-8 text-lg sm:mb-12">Online Study is an online learning platform that offers various courses for you. We are providing the best courses. We also provide full time support in online platform
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to="/" className="px-8 py-3 text-lg font-semibold bg-white text-navActive shadow-md border border-white rounded-md transition duration-200 hover:bg-navActive hover:border-navActive hover:text-white focus:shadow-outline focus:outline-none">Get Start</Link>
+                            <Link to="/courses" className="px-8 py-3 text-lg font-semibold bg-white text-navActive shadow-md border border-white rounded-md transition duration-200 hover:bg-navActive hover:border-navActive hover:text-white focus:shadow-outline focus:outline-none">Get Start</Link>
                             <Link to="/" className="px-8 py-3 text-lg text-navActive font-semibold border border-navActive shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none">Learn More</Link>
                         </div>
                     </div>

@@ -2,16 +2,16 @@ import React from 'react';
 
 const Reason = () => {
     return (
-        <div className='grid grid-cols-12 gap-6 bg-white py-8 rounded-md items-center'>
-            <div className='col-span-12 lg:col-span-5 flex flex-col justify-center'>
-                <div  className=''>
+        <div className='flex flex-col xl:flex-row gap-12 bg-white py-12 rounded-md items-center px-12'>
+            <div className='flex flex-col justify-center'>
+                <div className='mx-4'>
                     <h2 className='text-4xl font-bold text-navActive'>What Make Us Different</h2>
                     <p className='text-2xl p-4'>
                         See what make us different from any other online learning platform. We are giving the best to our students
                     </p>
                 </div>
             </div>
-            <div className='col-span-12 mt-6 lg:mt-0 lg:col-span-7'>
+            <div className=''>
                 <div className='flex flex-col justify-center items-center'>
                     <div className='flex flex-col gap-4 sm:gap-0 sm:flex-row justify-around sm:w-[530px] mx-auto'>
                         <div data-aos="fade-down-right" className='h-60 w-60 text-left p-4 rounded-md shadow shadow-navActive'>

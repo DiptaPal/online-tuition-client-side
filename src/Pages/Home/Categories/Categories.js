@@ -20,11 +20,7 @@ const Categories = () => {
                     <p className='text-xl'>Explore popular and leading courses for you.</p>
                     <p className='text-xl'>It's very helpful for the beginner to know about that</p>
                 </div>
-                <div className='flex items-end justify-center'>
-                    <button className=" px-8 py-3 mt-4 lg:mt-0 text-lg bg-white text-navActive font-semibold  shadow-md rounded-md transition duration-200 hover:bg-navActive hover:text-white focus:shadow-outline focus:outline-none">
-                        View All Category
-                    </button>
-                </div>
+                
             </div>
             <Swiper
                 slidesPerView={3}
