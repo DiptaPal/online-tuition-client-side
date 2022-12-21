@@ -108,7 +108,7 @@ const Footer = () => {
                             <BsGithub className='text-2xl text-black'></BsGithub>
                         </a>
                         <a  href="https://www.linkedin.com/">
-                            <BsLinkedin className='text-2xl text-sky-500 bg-white'></BsLinkedin>
+                            <BsLinkedin className='text-2xl text-blue-500 bg-white'></BsLinkedin>
                         </a>
                         <a  href="https://www.instagram.com/">
                            <BsInstagram className='text-2xl text-pink-600'></BsInstagram>

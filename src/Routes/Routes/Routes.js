@@ -1,6 +1,7 @@
 import AllCourses from "../../Pages/AllCourses/AllCourses";
 import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
+import ContactUs from "../../Pages/ContactUs/ContactUs";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Login from "../../Pages/Login/Login/Login";
@@ -41,6 +42,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>,
+            },
+            {
+                path: '/contactus',
+                element: <ContactUs></ContactUs>,
             },
             {
                 path: '/login',

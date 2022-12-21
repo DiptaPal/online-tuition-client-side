@@ -86,6 +86,17 @@ const Header = () => {
                                     Blog
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink
+                                    to="/contactus"
+                                    aria-label="Product pricing"
+                                    className={({ isActive }) =>
+                                        isActive ? "font-medium tracking-wide text-navActive hover:text-navColor transition-colors duration-300 text-xl" : "font-medium tracking-wide text-navColor hover:text-navActive transition-colors duration-300 text-xl"
+                                    }
+                                >
+                                    Contact Us
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
